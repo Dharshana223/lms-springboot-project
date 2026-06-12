@@ -1,9 +1,8 @@
-package com.lms_project.entity;
+package com.lms_project.QuizModule;
+
 
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -11,17 +10,23 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Result {
+public class Question {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long studentId;
+    private String questionText;
 
-    private Integer score;
+    private String optionA;
 
-    private LocalDateTime submittedAt;
+    private String optionB;
+
+    private String optionC;
+
+    private String optionD;
+
+    private String correctAnswer;
 
     @ManyToOne
     @JoinColumn(name = "quiz_id")

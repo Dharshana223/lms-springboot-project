@@ -1,4 +1,4 @@
-package com.lms_project.entity;
+package com.lms_project.QuizModule;
 
 import jakarta.persistence.*;
 import lombok.*;
